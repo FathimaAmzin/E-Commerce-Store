@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fieldwork Goods — Handcrafted stoneware, waxed canvas, and hand-finished wood sourced from small workshops. Built to outlast the trend cycle.">
+<title>Fieldwork Goods — Everyday tools, beautifully made</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/index.html" class="brand">
+      <span class="brand-dot"></span>
+      Fieldwork Goods
+    </a>
+    <nav class="nav-links" id="main-nav" data-auth-slot>
+      <!-- filled by common.js -->
+    </nav>
+    <a href="/cart.html" class="cart-btn" id="cart-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      Cart
+      <span class="cart-count" data-cart-count style="display:none;">0</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1800&q=85&fit=crop&crop=center');"></div>
+  <div class="hero-content">
+    <p class=></p>
+    <h1>Tools built to<br><em>outlast</em> the<br>trend cycle.</h1>
+    <p class="hero-sub">Stoneware, waxed canvas, and hand-finished wood — sourced from small workshops, stocked in limited runs.</p>
+    <div class="hero-actions">
+      <a href="#catalog" class="btn btn-primary" id="hero-shop-btn">
+        Shop the Catalog
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#about" class="btn btn-dark" id="hero-story-btn">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="1" y="1" width="14" height="22" rx="7"/>
+      <line x1="8" y1="6" x2="8" y2="10"/>
+    </svg>
+    Scroll
+  </div>
+</section>
+
+<!-- ===================== FEATURES STRIP ===================== -->
+<div class="features-strip">
+  <div class="features-inner">
+    <div class="feature-item">
+      <div class="feature-icon">🔨</div>
+      <div class="feature-text">
+        <strong>Handcrafted Quality</strong>
+        <span>Made by artisans, not machines</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🌿</div>
+      <div class="feature-text">
+        <strong>Sustainably Sourced</strong>
+        <span>Small workshops, big values</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">📦</div>
+      <div class="feature-text">
+        <strong>Free Shipping</strong>
+        <span>On all orders over රු 10,000</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">♾️</div>
+      <div class="feature-text">
+        <strong>Lifetime Warranty</strong>
+        <span>We stand behind every piece</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CATALOG ===================== -->
+<section class="catalog-section" id="catalog">
+  <div class="container">
+    <div class="catalog-header">
+      <div>
+        <p class="section-label">The Collection</p>
+        <h2 class="section-title">Shop the <em>Catalog</em></h2>
+        <p class="section-sub">Each piece is made in limited runs. When it's gone, it's gone.</p>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <div class="search-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="search" id="search-input" placeholder="Search the catalog…">
+      </div>
+      <div id="category-chips" class="row" style="flex-wrap:wrap;"></div>
+    </div>
+
+    <div id="product-grid" class="product-grid">
+      <!-- filled by products.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COLLECTIONS IMAGE GRID ===================== -->
+<section class="collection-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px;" class="animate-in">
+      <p class="section-label" style="justify-content:center;">Browse by Category</p>
+      <h2 class="section-title">Explore Our <em>Collections</em></h2>
+    </div>
+    <div class="collection-grid animate-in">
+      <div class="collection-item" onclick="filterByCategory('Ceramics')">
+        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80&fit=crop" alt="Ceramics &amp; Stoneware" loading="lazy">
+        <div class="collection-item-overlay">
+          <div class="collection-item-tag">Handmade</div>
+          <div class="collection-item-name">Ceramics &amp; Stoneware</div>
+        </div>
+      </div>
+      <div class="collection-item" onclick="filterByCategory('Bags')">
+        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80&fit=crop" alt="Bags &amp; Packs" loading="lazy">
+        <div class="collection-item-overlay">
+          <div class="collection-item-tag">Waxed Canvas &amp; Leather</div>
+          <div class="collection-item-name">Bags &amp; Packs</div>
+        </div>
+      </div>
+      <div class="collection-item" onclick="filterByCategory('Woodenware')">
+        <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=800&q=80&fit=crop" alt="Woodenware" loading="lazy">
+        <div class="collection-item-overlay">
+          <div class="collection-item-tag">Solid Hardwood</div>
+          <div class="collection-item-name">Woodenware</div>
+        </div>
+      </div>
+      <div class="collection-item" onclick="filterByCategory('Textiles')">
+        <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800&q=80&fit=crop" alt="Textiles" loading="lazy">
+        <div class="collection-item-overlay">
+          <div class="collection-item-tag">Wool &amp; Linen</div>
+          <div class="collection-item-name">Textiles</div>
+        </div>
+      </div>
+      <div class="collection-item" onclick="filterByCategory('Garden Tools')">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80&fit=crop" alt="Garden Tools" loading="lazy">
+        <div class="collection-item-overlay">
+          <div class="collection-item-tag">Forged Steel</div>
+          <div class="collection-item-name">Garden Tools</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT / STORY ===================== -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image animate-in">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=900&q=85&fit=crop" alt="Our artisan workshop" loading="lazy">
+      </div>
+      <div class="animate-in" style="transition-delay:0.15s">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">Made by hand,<br><em>meant to last</em></h2>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:18px;font-size:0.97rem;">
+          Fieldwork Goods was founded on a simple idea: the things you use every day should be beautiful, durable, and made by people who care. We partner with small workshops around the world to bring you goods that tell a story.
+        </p>
+        <p style="color:var(--muted);line-height:1.8;font-size:0.97rem;">
+          Every item in our catalog is reviewed, tested, and stocked in limited runs. No mass production. No corners cut. Just honest goods for people who appreciate the craft.
+        </p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">47</div>
+            <div class="stat-label">Artisan Partners</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Years Curating</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">9k+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LIFESTYLE BANNER ===================== -->
+<section style="padding:0;position:relative;height:420px;overflow:hidden;" class="animate-in">
+  <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1800&q=85&fit=crop&crop=center" alt="Lifestyle" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(250,250,247,0.88) 0%,rgba(250,250,247,0.4) 60%,transparent 100%);display:flex;align-items:center;">
+    <div style="max-width:1260px;margin:0 auto;padding:0 36px;width:100%;">
+      <p class="section-label">Crafted with Care</p>
+      <h2 class="section-title" style="font-size:clamp(1.8rem,3.5vw,2.8rem);max-width:500px;">Every piece has a<br><em>story to tell.</em></h2>
+      <a href="#catalog" class="btn btn-primary" style="margin-top:16px;">Start Shopping</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="testimonials-section">
+  <div class="container">
+    <div style="text-align:center;" class="animate-in">
+      <p class="section-label" style="justify-content:center;">Customer Stories</p>
+      <h2 class="section-title" style="text-align:center;">Loved by <em>makers</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card animate-in">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The stoneware mug is the first thing I reach for every morning. The weight, the glaze, the warmth it holds — it's just perfect."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face&q=80" alt="Sarah">
+          </div>
+          <div>
+            <div class="author-name">Sarah M.</div>
+            <div class="author-loc">Portland, OR</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card animate-in" style="transition-delay:0.1s">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"I bought the waxed canvas tote two years ago and it still looks incredible. Better with age. That's what real quality feels like."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face&q=80" alt="James">
+          </div>
+          <div>
+            <div class="author-name">James T.</div>
+            <div class="author-loc">Brooklyn, NY</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card animate-in" style="transition-delay:0.2s">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The leather journal has become my most prized possession. The craftsmanship is unlike anything I've ever owned. Worth every penny."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face&q=80" alt="Priya">
+          </div>
+          <div>
+            <div class="author-name">Priya K.</div>
+            <div class="author-loc">London, UK</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRESS LOGOS ===================== -->
+<section style="padding:48px 0;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="container">
+    <p style="text-align:center;font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted-lt);margin-bottom:28px;">As Seen In</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;opacity:0.45;filter:grayscale(1);">
+      <span style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--charcoal);">Kinfolk</span>
+      <span style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--charcoal);">Monocle</span>
+      <span style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--charcoal);">Wallpaper*</span>
+      <span style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--charcoal);">Cereal</span>
+      <span style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--charcoal);">Dezeen</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER ===================== -->
+<div class="newsletter-section animate-in">
+  <p class="section-label" style="justify-content:center;margin-bottom:12px;">Stay in the Loop</p>
+  <h2>New arrivals, first access.</h2>
+  <p>Join our list and never miss a limited drop.</p>
+  <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)">
+    <input type="email" id="newsletter-email" placeholder="your@email.com" required>
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+  </form>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="/index.html" class="brand" style="margin-bottom:14px;display:flex;">
+          <span class="brand-dot"></span>
+          Fieldwork Goods
+        </a>
+        <p class="footer-tagline">Handcrafted tools and goods built to outlast the trend cycle. Sourced from small workshops worldwide.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="/index.html">All Products</a></li>
+          <li><a href="#catalog">New Arrivals</a></li>
+          <li><a href="#catalog">Limited Runs</a></li>
+          <li><a href="/cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="/login.html">Log In</a></li>
+          <li><a href="/register.html">Sign Up</a></li>
+          <li><a href="/orders.html">My Orders</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fieldwork Goods. All rights reserved.</span>
+      <span>Handcrafted with ♥</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/common.js"></script>
+<script src="/js/products.js"></script>
+<script>
+// Header scroll effect
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+// Mobile nav toggle
+const navToggle = document.getElementById('nav-toggle');
+const mainNav = document.getElementById('main-nav');
+navToggle && navToggle.addEventListener('click', () => {
+  mainNav.classList.toggle('open');
+});
+
+// Smooth scroll CTAs
+document.getElementById('hero-shop-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+});
+document.getElementById('hero-story-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Collection filter click
+function filterByCategory(cat) {
+  const chips = document.querySelectorAll('.chip');
+  chips.forEach(c => {
+    if (c.textContent.trim().toLowerCase() === cat.toLowerCase()) {
+      c.click();
+    }
+  });
+  document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Intersection Observer animate-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+// Newsletter
+function handleNewsletter(e) {
+  e.preventDefault();
+  showToast('You\'re subscribed! Welcome to the family 🌿');
+  document.getElementById('newsletter-email').value = '';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Track your Fieldwork Goods orders — view order history and delivery status.">
+<title>Your Orders — Fieldwork Goods</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/index.html" class="brand">
+      <span class="brand-dot"></span>
+      Fieldwork Goods
+    </a>
+    <nav class="nav-links" data-auth-slot></nav>
+    <a href="/cart.html" class="cart-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      Cart <span class="cart-count" data-cart-count style="display:none;">0</span>
+    </a>
+  </div>
+</header>
+
+<main class="container" style="padding-top:48px;padding-bottom:96px;">
+  <div style="margin-bottom:44px;">
+    <p class="eyebrow" style="margin-bottom:8px;">Account</p>
+    <h1>Your Orders</h1>
+    <p class="lede">Track and review your past purchases.</p>
+  </div>
+  <div id="orders-content">
+    <div class="empty-state">
+      <div class="icon">📦</div>
+      <p class="muted">Loading your orders…</p>
+    </div>
+  </div>
+</main>
+
+<script src="/js/common.js"></script>
+<script src="/js/orders.js"></script>
+<script>
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+</script>
+</body>
+</html>

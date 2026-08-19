@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Create your Fieldwork Goods account.">
+<title>Sign Up — Fieldwork Goods</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/index.html" class="brand"><span class="brand-dot"></span>Fieldwork Goods</a>
+    <nav class="nav-links" data-auth-slot></nav>
+    <a href="/cart.html" class="cart-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      Cart <span class="cart-count" data-cart-count style="display:none;">0</span>
+    </a>
+  </div>
+</header>
+
+<main class="form-page">
+  <div style="position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;">
+    <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1200&q=60&fit=crop" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.07;">
+  </div>
+  <div class="form-card" style="position:relative;z-index:1;">
+    <p class="eyebrow">Join the community</p>
+    <h2>Create account</h2>
+    <div id="form-error"></div>
+    <form id="register-form">
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required autocomplete="name" placeholder="Ada Lovelace">
+      </div>
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required autocomplete="email" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" required minlength="6" autocomplete="new-password" placeholder="At least 6 characters">
+      </div>
+      <button class="btn btn-primary" type="submit" id="register-submit-btn" style="width:100%;margin-top:8px;">
+        Create Account
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </form>
+    <p class="form-foot">Already have an account? <a href="/login.html">Log in here</a></p>
+  </div>
+</main>
+
+<script src="/js/common.js"></script>
+<script src="/js/auth.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+</script>
+</body>
+</html>
